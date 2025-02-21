@@ -57,8 +57,8 @@ INSERT INTO Smartphone (Marca, SistemaOperacional, Tela, MemoriaRAM, Armazenamen
 
 -- Exemplo de como associar smartphones a proprietários
 INSERT INTO SmartphonesDoProprietario (CodigoDoProprietario, CodigoDoSmartphone) VALUES 
-  (1, 1),  -- Natan possui o smartphone 1
-  (2, 2),  -- João possui o smartphone 2
-  (3, 3),  -- Maria possui o smartphone 3
-  (4, 4),  -- Pedro possui o smartphone 4
-  (5, 5);  -- Ana possui o smartphone 5
+    (1, 1),  -- Natan possui o smartphone 1
+    (2, 2),  -- João possui o smartphone 2
+    (3, 3),  -- Maria possui o smartphone 3
+    (4, 4),  -- Pedro possui o smartphone 4
+    (5, 5);  -- Ana possui o smartphone 5
