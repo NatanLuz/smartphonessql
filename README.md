@@ -17,3 +17,5 @@ O projeto inclui os scripts SQL para:
 Criação do banco de dados e das tabelas.
 Inserção de dados de exemplo para marcas, proprietários e smartphones.
 Associação de smartphones a proprietários.
+
+Elaborado para um projeto em minha antiga faculdade.
