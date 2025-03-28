@@ -1,6 +1,21 @@
 # SmartphoneDB - Banco de Dados de Smartphones e Proprietários
+**Projeto de banco de dados para gerenciar marcas, smartphones e proprietários.**
 
 Este projeto consiste em um banco de dados para armazenar informações sobre marcas de smartphones, proprietários e a relação entre eles.
+
+## Como Usar
+Clone ou baixe este repositório em seu computador.
+
+Importe o arquivo SQL no seu sistema de gerenciamento de banco de dados (ex.: MySQL, MariaDB).
+
+Execute os scripts SQL para criar o banco de dados, as tabelas e inserir os dados de exemplo.
+
+Você pode realizar consultas para explorar as informações sobre marcas, proprietários e smartphones.
+
+## Personalização
+Para adicionar mais marcas ou smartphones, edite os scripts de inserção no código SQL.
+
+Para adicionar novos proprietários, adicione-os na tabela **Proprietario** e associe-os com smartphones na tabela **SmartphonesDoProprietario**.
 
 ## Estrutura do Banco de Dados
 
@@ -14,7 +29,6 @@ O banco de dados é composto por quatro tabelas principais:
 ## Scripts SQL
 
 O projeto inclui os scripts SQL para:
-
 - Criação do banco de dados e das tabelas.
 - Inserção de dados de exemplo para marcas, proprietários e smartphones.
 - Associação de smartphones a proprietários.
