@@ -1,4 +1,5 @@
 # SmartphoneDB - Banco de Dados de Smartphones e Proprietários
+
 **Projeto de banco de dados para gerenciar marcas, smartphones e proprietários.**
 (Feito e praticado por uma atividade solicitada da minha faculdade)
 
