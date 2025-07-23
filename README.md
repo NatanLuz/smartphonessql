@@ -1,43 +1,44 @@
-# SmartphoneDB - Banco de Dados de Smartphones e Proprietários (Acadêmico)
+## SmartphoneDB - Smartphone and Owner Database (Academic Project)
 
-**Projeto de banco de dados para gerenciar marcas, smartphones e proprietários.**
-(Feito e praticado por uma atividade solicitada da minha faculdade)
+Database project to manage smartphone brands, owners, and their relationships.
+(Created and practiced as a college assignment)
 
-Este projeto consiste em um banco de dados para armazenar informações sobre marcas de smartphones, proprietários e a relação entre eles.
+This project consists of a database to store information about smartphone brands, owners, and the relationship between them.
 
-## Como Usar
-Clone ou baixe este repositório em seu computador.
+How to Use
+Clone or download this repository to your computer.
 
-Importe o arquivo SQL no seu sistema de gerenciamento de banco de dados (ex.: MySQL, MariaDB).
+Import the SQL file into your database management system (e.g., MySQL, MariaDB).
 
-Execute os scripts SQL para criar o banco de dados, as tabelas e inserir os dados de exemplo.
+Run the SQL scripts to create the database, tables, and insert sample data.
 
-Você pode realizar consultas para explorar as informações sobre marcas, proprietários e smartphones.
+You can perform queries to explore information about brands, owners, and smartphones.
 
-## Personalização
-Para adicionar mais marcas ou smartphones, edite os scripts de inserção no código SQL.
+Customization
+To add more brands or smartphones, edit the insertion scripts in the SQL code.
 
-Para adicionar novos proprietários, adicione-os na tabela **Proprietario** e associe-os com smartphones na tabela **SmartphonesDoProprietario**.
+To add new owners, add them in the Proprietario table and associate them with smartphones in the SmartphonesDoProprietario table.
 
-## Estrutura do Banco de Dados
+Database Structure
+The database consists of four main tables:
 
-O banco de dados é composto por quatro tabelas principais:
+Marca: Stores smartphone brands.
 
-1. **Marca**: Armazena as marcas dos smartphones.
-2. **Proprietario**: Armazena os dados dos proprietários dos smartphones.
-3. **Smartphone**: Armazena as especificações técnicas dos smartphones.
-4. **SmartphonesDoProprietario**: Relaciona quais proprietários possuem quais smartphones (relação muitos-para-muitos).
+Proprietario: Stores smartphone owners’ data.
 
-## Scripts SQL
+Smartphone: Stores technical specifications of smartphones.
 
-O projeto inclui os scripts SQL para:
-- Criação do banco de dados e das tabelas.
-- Inserção de dados de exemplo para marcas, proprietários e smartphones.
-- Associação de smartphones a proprietários.
+SmartphonesDoProprietario: Relates which owners own which smartphones (many-to-many relationship).
 
-### Código SQL
+SQL Scripts
+The project includes SQL scripts for:
 
-```sql
+Creating the database and tables.
+Inserting sample data for brands, owners, and smartphones.
+Associating smartphones with owners.
+
+SQL Code Example:
+
 CREATE DATABASE IF NOT EXISTS SmartphoneDB;
 USE SmartphoneDB;
 
@@ -95,10 +96,10 @@ INSERT INTO Smartphone (Marca, SistemaOperacional, Tela, MemoriaRAM, Armazenamen
   (5, 'Android', '6.5"', 8, 128, '108MP'),
   (6, 'Android', '6.4"', 6, 128, '50MP');
 
--- Exemplo de como associar smartphones a proprietários
+-- Example of associating smartphones to owners
 INSERT INTO SmartphonesDoProprietario (CodigoDoProprietario, CodigoDoSmartphone) VALUES 
-    (1, 1),  -- Natan possui o smartphone 1
-    (2, 2),  -- João possui o smartphone 2
-    (3, 3),  -- Maria possui o smartphone 3
-    (4, 4),  -- Pedro possui o smartphone 4
-    (5, 5);  -- Ana possui o smartphone 5
+    (1, 1),  -- Natan owns smartphone 1
+    (2, 2),  -- João owns smartphone 2
+    (3, 3),  -- Maria owns smartphone 3
+    (4, 4),  -- Pedro owns smartphone 4
+    (5, 5);  -- Ana owns smartphone 5
