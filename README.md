@@ -1,38 +1,46 @@
 ## SmartphoneDB - Smartphone and Owner Database (Academic Project)
 
-Database project to manage smartphone brands, owners, and their relationships.
-(Created and practiced as a college assignment)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)]()
+[![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat&logo=mariadb&logoColor=white)]()
+[![SQL](https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white)]()
 
-This project consists of a database to store information about smartphone brands, owners, and the relationship between them.
+![Diagrama ER do SmartphoneDB](https://i.imgur.com/rl2wzTo.jpeg)
 
-How to Use
-Clone or download this repository to your computer.
+---
 
-Import the SQL file into your database management system (e.g., MySQL, MariaDB).
+##  About the Project
+Database project to manage smartphone brands, owners, and their relationships. *(Academic exercise)*
 
-Run the SQL scripts to create the database, tables, and insert sample data.
+---
 
-You can perform queries to explore information about brands, owners, and smartphones.
+##  Database Structure
+O diagrama acima representa:
+- **Marca**: tabela de marcas de smartphones
+- **Proprietario**: dados dos proprietários
+- **Smartphone**: especificações dos dispositivos
+- **SmartphonesDoProprietario**: relação entre proprietários e smartphones (N:M)
 
-Customization
-To add more brands or smartphones, edit the insertion scripts in the SQL code.
+---
 
-To add new owners, add them in the Proprietario table and associate them with smartphones in the SmartphonesDoProprietario table.
+##  How to Use
+1. Clone ou baixe o repositório
+2. Importe o arquivo SQL (.sql) no MySQL/MariaDB
+3. Execute os scripts para criar o banco, inserir dados de exemplo e testar queries
 
-Database Structure
-The database consists of four main tables:
+---
 
-Marca: Stores smartphone brands.
+##  Customization
+- Adicione novas marcas ou smartphones editando os scripts de inserção
+- Insira novos proprietários e associe-os via a tabela de relacionamento
 
-Proprietario: Stores smartphone owners’ data.
+---
 
-Smartphone: Stores technical specifications of smartphones.
+##  SQL Scripts
+- Criação de banco e tabelas
+- Inserção de dados de exemplos (Marca, Proprietário, Smartphone)
+- Associação de proprietários com smartphones
 
-SmartphonesDoProprietario: Relates which owners own which smartphones (many-to-many relationship).
+---
 
-SQL Scripts
-The project includes SQL scripts for:
-
-Creating the database and tables.
-Inserting sample data for brands, owners, and smartphones.
-Associating smartphones with owners.
+##  Author
+**Natan da Luz** – Developer
