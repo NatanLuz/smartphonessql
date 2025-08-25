@@ -8,39 +8,39 @@
 
 ---
 
-##  About the Project
+## About the Project
 Database project to manage smartphone brands, owners, and their relationships. *(Academic exercise)*
 
 ---
 
-##  Database Structure
-O diagrama acima representa:
-- **Marca**: tabela de marcas de smartphones
-- **Proprietario**: dados dos proprietários
-- **Smartphone**: especificações dos dispositivos
-- **SmartphonesDoProprietario**: relação entre proprietários e smartphones (N:M)
+## Database Structure
+The diagram above represents:
+- **Brand**: smartphone brand table
+- **Owner**: owner data
+- **Smartphone**: device specifications
+- **SmartphonesDoOwner**: relationship between owners and smartphones (N:M)
 
 ---
 
-##  How to Use
-1. Clone ou baixe o repositório
-2. Importe o arquivo SQL (.sql) no MySQL/MariaDB
-3. Execute os scripts para criar o banco, inserir dados de exemplo e testar queries
+## How to Use
+1. Clone or download the repository
+2. Import the SQL file (.sql) into MySQL/MariaDB
+3. Run the scripts to create the database, insert sample data, and test queries
 
 ---
 
-##  Customization
-- Adicione novas marcas ou smartphones editando os scripts de inserção
-- Insira novos proprietários e associe-os via a tabela de relacionamento
+## Customization
+- Add new brands or smartphones by editing the insertion scripts
+- Insert new owners and associate them via the relationship table
 
 ---
 
-##  SQL Scripts
-- Criação de banco e tabelas
-- Inserção de dados de exemplos (Marca, Proprietário, Smartphone)
-- Associação de proprietários com smartphones
+## SQL Scripts
+- Creating a database and tables
+- Inserting sample data (Brand, Owner, Smartphone)
+- Associating owners with smartphones
 
 ---
 
-##  Author
+## Author
 **Natan da Luz** – Developer
