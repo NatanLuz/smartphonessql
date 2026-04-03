@@ -10,8 +10,7 @@ Projeto de banco de dados relacional para gestao de marcas, smartphones e propri
 
 ## Objetivo
 
-Este projeto foi estruturado para deixar de ser um exercicio basico e demonstrar pratica profissional em SQL, com os seguintes pilares:
-
+Projeto foi estruturado para deixar de ser um exercicio basico e demonstrar pratica profissional em SQL, com os seguintes pilares:
 - padronizacao de schema;
 - integridade referencial;
 - modelagem N:N consistente;
@@ -22,10 +21,10 @@ Este projeto foi estruturado para deixar de ser um exercicio basico e demonstrar
 
 O banco representa quatro entidades principais:
 
-1. marca
-2. proprietario
-3. smartphone
-4. proprietario_smartphone (tabela associativa N:N)
+1. A marca
+2. O proprietario
+3. Os smartphone
+4. E por fim proprietario_smartphone (tabela associativa N:N)
 
 ## Principais Decisoes Tecnicas
 
