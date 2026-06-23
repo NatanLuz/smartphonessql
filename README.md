@@ -24,11 +24,14 @@ Estruturar um banco de dados relacional consistente, aplicando boas práticas de
 ## ⚙️ Funcionalidades
 
 * Modelagem de entidades: marca, smartphone e proprietário
+
 * Implementação de relacionamento N:N via tabela associativa
+
 * Definição de constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE)
+
 * Inserção de dados iniciais para testes
 * Consultas SQL com JOIN, agregações e subqueries
-* Validação de regras de integridade e comportamento
+* Validação de Regras de Integridade e Comportamento
 
 ---
 
