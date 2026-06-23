@@ -130,7 +130,10 @@ ORDER BY total_smartphones DESC;
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Natan Da Luz**
-Desenvolvedor de Software
+
+- [LinkedIn](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
+
+- [E-mail](mailto:natandaluz01@gmail.com)
