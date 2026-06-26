@@ -1,4 +1,4 @@
-## SmartphoneDB
+## Smartphones DB(Banco de dados)
 
 Projeto de banco de dados relacional desenvolvido para modelagem e consulta de dados de marcas, smartphones e proprietários, com foco em integridade, consistência e uso de SQL orientado a cenários reais.
 
