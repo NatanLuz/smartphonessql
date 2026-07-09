@@ -1,114 +1,65 @@
-## Smartphones DB(Banco de dados)
-
-Projeto de banco de dados relacional desenvolvido para modelagem e consulta de dados de marcas, smartphones e proprietários, com foco em integridade, consistência e uso de SQL orientado a cenários reais.
+# Smartphones DB
 
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat\&logo=mysql\&logoColor=white)]()
 [![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat\&logo=mariadb\&logoColor=white)]()
 [![SQL](https://img.shields.io/badge/SQL-336791?style=flat\&logo=postgresql\&logoColor=white)]()
 
----
+## 📖 Sobre o projeto
 
-## 🎯 Proposta de Valor
+O **Smartphones DB** é um projeto de banco de dados relacional desenvolvido em SQL para modelar informações sobre fabricantes, smartphones e seus proprietários.
 
-Estruturar um banco de dados relacional consistente, aplicando boas práticas de modelagem, integridade referencial e consultas SQL com valor de negócio.
+O objetivo é demonstrar conceitos de modelagem relacional, normalização, integridade referencial, criação de tabelas, relacionamento entre entidades e elaboração de consultas aplicadas a cenários reais.
 
-**Benefícios principais:**
+O modelo utiliza quatro entidades. A tabela associativa `proprietario_smartphone` representa a relação muitos-para-muitos entre proprietários e dispositivos, evitando a duplicação de dados e mantendo as responsabilidades de cada tabela separadas.
 
-* Modelagem relacional bem definida (incluindo relação N:N)
-* Garantia de integridade e consistência dos dados
-* Tipagem orientada ao domínio
-* Consultas SQL aplicadas a cenários reais
+### Modelo de dados
 
----
+| Entidade | Responsabilidade |
+| --- | --- |
+| `marca` | Armazena os fabricantes |
+| `smartphone` | Armazena os dispositivos |
+| `proprietario` | Armazena os proprietários |
+| `proprietario_smartphone` | Associa proprietários e smartphones |
 
-## ⚙️ Funcionalidades
-
-* Modelagem de entidades: marca, smartphone e proprietário
-
-* Implementação de relacionamento N:N via tabela associativa
-
-* Definição de constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE)
-
-* Inserção de dados iniciais para testes
-* Consultas SQL com JOIN, agregações e subqueries
-* Validação de Regras de Integridade e Comportamento
-
----
-
-## 🏗️ Arquitetura / Estrutura
-
-Modelo relacional composto por quatro entidades principais:
-
-* **marca** → fabricantes de dispositivos
-* **smartphone** → dispositivos cadastrados
-* **proprietario** → usuários dos dispositivos
-* **proprietario_smartphone** → relação N:N entre usuários e dispositivos
-
-Estrutura do projeto:
-
-```bash
-SmartphoneDB/
-├── SmartphoneDB.sql
-├── README.md
-├── evidencias_execucao_01_consulta_agrupada.jpg
-├── evidencias_execucao_02_listagem_tabelas.jpg
+```text
+marca
+  │
+  └── smartphone
+          │
+          └── proprietario_smartphone
+                         └── proprietario
 ```
 
----
+### Integridade referencial
 
-## 🔐 Segurança
+O script utiliza:
 
-* Integridade referencial com uso de FOREIGN KEY
-* Restrição de exclusão com `ON DELETE RESTRICT`
-* Remoção controlada em tabelas associativas com `ON DELETE CASCADE`
-* Constraint `UNIQUE` para evitar duplicidade de dados
-* Tipagem adequada para evitar inconsistências
+- Chaves primárias para identificar os registros;
+- chaves estrangeiras para preservar os relacionamentos;
+- constraints `UNIQUE` para impedir duplicidades;
+- `ON DELETE RESTRICT` para bloquear exclusões que violariam dependências;
+- `ON DELETE CASCADE` para remoção controlada dos vínculos na tabela associativa;
+- tipos de dados adequados ao domínio.
 
----
+## ✨ Funcionalidades
 
-## 🧰 Stack Tecnológica
+- Criação do modelo relacional;
+- cadastro de fabricantes;
+- cadastro de smartphones;
+- cadastro de proprietários;
+- relacionamento muitos-para-muitos;
+- utilização de tabela associativa;
+- definição de chaves primárias e estrangeiras;
+- aplicação de constraints `UNIQUE`;
+- inserção de dados iniciais para testes;
+- consultas SQL com `JOIN`;
+- consultas com funções de agregação;
+- consultas com subqueries;
+- validação das regras de integridade e do comportamento das constraints.
 
-* MySQL / MariaDB
-* SQL (DDL e DML)
+### Consulta de validação
 
----
-
-## 🚀 Instalação
-
-### Pré-requisitos
-
-* MySQL ou MariaDB em execução (ex.: XAMPP)
-
-### Passos
-
-1. Clonar o repositório
-2. Acessar a pasta do projeto
-3. Executar o script SQL
-
-```bash
-git clone https://github.com/seu-usuario/SmartphoneDB.git
-cd SmartphoneDB
-```
-
-Execução do script:
-
-```bash
-mysql -u root -e "source SmartphoneDB.sql"
-```
-
----
-
-## 🧪 Testes Rápidos
-
-**Checklist funcional:**
-
-1. Validar criação das tabelas
-2. Confirmar inserção dos dados iniciais
-3. Executar consultas com JOIN
-4. Validar agregações (COUNT, AVG)
-5. Testar restrições de integridade (RESTRICT e CASCADE)
-
-Consulta de validação:
+O script inclui consultas aplicadas ao modelo. O exemplo abaixo contabiliza os smartphones associados a cada proprietário:
 
 ```sql
 SELECT p.nome, COUNT(ps.smartphone_id) AS total_smartphones
@@ -118,22 +69,119 @@ GROUP BY p.id, p.nome
 ORDER BY total_smartphones DESC;
 ```
 
----
+## 🖼️ Screenshots
 
-## 📸 Screenshots
+### Diagrama do modelo relacional
 
 ![Diagrama ER](https://i.imgur.com/rl2wzTo.jpeg)
 
-![Consulta agrupada por proprietário](evidencias_execucao_01_consulta_agrupada.jpg)
+### Consulta agrupada por proprietário
 
-![Listagem de tabelas](evidencias_execucao_02_listagem_tabelas.jpg)
+![Resultado da consulta agrupada](evidencias_execucao_01_consulta_agrupada.jpg)
 
----
+### Listagem das tabelas
 
-## Autor
+![Listagem das tabelas do banco](evidencias_execucao_02_listagem_tabelas.jpg)
+
+## 🚀 Tecnologias
+
+- **SQL:** definição e manipulação dos dados com DDL e DML;
+- **MySQL:** sistema gerenciador de banco de dados relacional;
+- **MariaDB:** alternativa compatível para execução do script.
+
+## ⚙️ Como executar
+
+### Pré-requisitos
+
+- Git;
+- MySQL ou MariaDB em execução;
+- cliente de linha de comando do banco ou phpMyAdmin.
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/seu-usuario/SmartphoneDB.git
+cd SmartphoneDB
+```
+
+### Importar com MySQL CLI
+
+Execute o script a partir da raiz do repositório:
+
+```bash
+mysql -u root -e "source SmartphoneDB.sql"
+```
+
+Se o usuário exigir senha, utilize:
+
+```bash
+mysql -u root -p -e "source SmartphoneDB.sql"
+```
+
+### Importar com phpMyAdmin
+
+1. Inicie o MySQL ou MariaDB;
+2. abra o phpMyAdmin;
+3. acesse a opção **Importar**;
+4. selecione o arquivo `SmartphoneDB.sql`;
+5. confirme a execução.
+
+### Verificação
+
+Após a importação:
+
+1. Confirme a criação das quatro tabelas;
+2. verifique os dados iniciais;
+3. execute as consultas com `JOIN`;
+4. valide as agregações, incluindo `COUNT` e `AVG`;
+5. teste as restrições `RESTRICT` e `CASCADE`.
+
+## 📂 Estrutura do projeto
+
+O repositório reúne o script SQL, a documentação e as evidências de execução:
+
+```text
+SmartphoneDB/
+├── SmartphoneDB.sql
+├── README.md
+├── evidencias_execucao_01_consulta_agrupada.jpg
+└── evidencias_execucao_02_listagem_tabelas.jpg
+```
+
+- `SmartphoneDB.sql`: criação das tabelas, constraints, dados de teste e consultas;
+- `README.md`: documentação técnica;
+- `evidencias_execucao_01_consulta_agrupada.jpg`: resultado da consulta agrupada;
+- `evidencias_execucao_02_listagem_tabelas.jpg`: evidência das tabelas criadas.
+
+## 📌 Roadmap (Próximas melhorias)
+
+Os itens abaixo representam possíveis evoluções e ainda não fazem parte do script atual:
+
+- [ ] Criar procedures;
+- [ ] adicionar triggers;
+- [ ] disponibilizar views;
+- [ ] criar índices para otimização;
+- [ ] implementar stored functions;
+- [ ] registrar auditoria de alterações;
+- [ ] preparar scripts de migração;
+- [ ] ampliar a documentação do modelo entidade-relacionamento;
+- [ ] fornecer um ambiente de banco com Docker;
+- [ ] automatizar os testes das consultas e constraints.
+
+## 🌐 Deploy
+
+O Smartphones DB é um projeto de banco de dados e não possui deploy web. O script pode ser executado em qualquer servidor compatível com MySQL ou MariaDB.
+
+A instalação consiste em importar `SmartphoneDB.sql` por meio do MySQL CLI, phpMyAdmin ou outra ferramenta compatível. Para uso remoto, basta executar o script em uma instância de banco com as permissões necessárias para criar tabelas, constraints e registros.
+
+## 👤 Autor
 
 **Natan Da Luz**
 
-- [LinkedIn](https://www.linkedin.com/in/natandaluzdesenvolvedor/)
+- LinkedIn: [linkedin.com/in/natandaluz](https://www.linkedin.com/in/natandaluz/)
+- Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
+- E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
 
-- [E-mail](mailto:natandaluz01@gmail.com)
+## 📄 Licença
+
+Este projeto está sem uma licença definida no momento.
