@@ -153,21 +153,6 @@ SmartphoneDB/
 - `evidencias_execucao_01_consulta_agrupada.jpg`: resultado da consulta agrupada;
 - `evidencias_execucao_02_listagem_tabelas.jpg`: evidência das tabelas criadas.
 
-## 📌 Roadmap (Próximas melhorias)
-
-Os itens abaixo representam possíveis evoluções e ainda não fazem parte do script atual:
-
-- [ ] Criar procedures;
-- [ ] adicionar triggers;
-- [ ] disponibilizar views;
-- [ ] criar índices para otimização;
-- [ ] implementar stored functions;
-- [ ] registrar auditoria de alterações;
-- [ ] preparar scripts de migração;
-- [ ] ampliar a documentação do modelo entidade-relacionamento;
-- [ ] fornecer um ambiente de banco com Docker;
-- [ ] automatizar os testes das consultas e constraints.
-
 ## 🌐 Deploy
 
 O Smartphones DB é um projeto de banco de dados e não possui deploy web. O script pode ser executado em qualquer servidor compatível com MySQL ou MariaDB.
