@@ -30,7 +30,7 @@ marca
                          └── proprietario
 ```
 
-### Integridade referencial
+### Integridade Referencial
 
 O script utiliza:
 
