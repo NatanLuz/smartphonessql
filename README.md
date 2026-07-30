@@ -71,11 +71,11 @@ ORDER BY total_smartphones DESC;
 
 ## 🖼️ Screenshots
 
-### Diagrama do modelo relacional
+### Diagrama do Modelo Relacional
 
 ![Diagrama ER](https://i.imgur.com/rl2wzTo.jpeg)
 
-### Consulta agrupada por proprietário
+### Consulta Agrupada por Proprietário
 
 ![Resultado da consulta agrupada](evidencias_execucao_01_consulta_agrupada.jpg)
 
