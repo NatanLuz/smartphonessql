@@ -12,7 +12,7 @@ O objetivo é demonstrar conceitos de modelagem relacional, normalização, inte
 
 O modelo utiliza quatro entidades. A tabela associativa `proprietario_smartphone` representa a relação muitos-para-muitos entre proprietários e dispositivos, evitando a duplicação de dados e mantendo as responsabilidades de cada tabela separadas.
 
-### Modelo de dados
+## Modelo de dados
 
 | Entidade | Responsabilidade |
 | --- | --- |
@@ -30,7 +30,7 @@ marca
                          └── proprietario
 ```
 
-### Integridade Referencial
+## Integridade Referencial
 
 O script utiliza:
 
@@ -75,11 +75,11 @@ ORDER BY total_smartphones DESC;
 
 ![Diagrama ER](https://i.imgur.com/rl2wzTo.jpeg)
 
-### Consulta Agrupada por Proprietário
+## Consulta Agrupada por Proprietário
 
 ![Resultado da consulta agrupada](evidencias_execucao_01_consulta_agrupada.jpg)
 
-### Listagem das tabelas
+## Listagem das tabelas
 
 ![Listagem das tabelas do banco](evidencias_execucao_02_listagem_tabelas.jpg)
 
@@ -91,20 +91,20 @@ ORDER BY total_smartphones DESC;
 
 ## ⚙️ Como executar
 
-### Pré-requisitos
+## Pré-requisitos
 
 - Git;
 - MySQL ou MariaDB em execução;
 - cliente de linha de comando do banco ou phpMyAdmin.
 
-### Clonar o repositório
+## Clonar o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/SmartphoneDB.git
 cd SmartphoneDB
 ```
 
-### Importar com MySQL CLI
+## Importar com MySQL CLI
 
 Execute o script a partir da raiz do repositório:
 
@@ -118,7 +118,7 @@ Se o usuário exigir senha, utilize:
 mysql -u root -p -e "source SmartphoneDB.sql"
 ```
 
-### Importar com phpMyAdmin
+## Importar com phpMyAdmin
 
 1. Inicie o MySQL ou MariaDB;
 2. abra o phpMyAdmin;
@@ -126,7 +126,7 @@ mysql -u root -p -e "source SmartphoneDB.sql"
 4. selecione o arquivo `SmartphoneDB.sql`;
 5. confirme a execução.
 
-### Verificação
+## Verificação
 
 Após a importação:
 
