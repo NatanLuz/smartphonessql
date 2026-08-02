@@ -1,4 +1,4 @@
-# Smartphones DB
+# Smartphones | DB COM SQL MYSQL E MARIADB
 
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat\&logo=mysql\&logoColor=white)]()
 [![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat\&logo=mariadb\&logoColor=white)]()
