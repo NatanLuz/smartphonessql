@@ -1,25 +1,25 @@
-## Projeto Smartphones
+## Smartphone Project
 
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat\&logo=mysql\&logoColor=white)]()
-[![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat\&logo=mariadb\&logoColor=white)]()
-[![SQL](https://img.shields.io/badge/SQL-336791?style=flat\&logo=postgresql\&logoColor=white)]()
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)]()
+[![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat&logo=mariadb&logoColor=white)]()
+[![SQL](https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white)]()
 
-## 📖 Sobre o projeto
+## 📖 About the project
 
-O **Smartphones DB** é um projeto de banco de dados relacional desenvolvido em SQL para modelar informações sobre fabricantes, smartphones e seus proprietários.
+**Smartphones DB** is a relational database project developed in SQL to model information about manufacturers, smartphones, and their owners.
 
-O objetivo é demonstrar conceitos de modelagem relacional, normalização, integridade referencial, criação de tabelas, relacionamento entre entidades e elaboração de consultas aplicadas a cenários reais.
+The goal is to demonstrate concepts such as relational modeling, normalization, referential integrity, table creation, relationships between entities, and the development of queries applied to real-world scenarios.
 
-O modelo utiliza quatro entidades. A tabela associativa `proprietario_smartphone` representa a relação muitos-para-muitos entre proprietários e dispositivos, evitando a duplicação de dados e mantendo as responsabilidades de cada tabela separadas.
+The model uses four entities. The associative table `proprietario_smartphone` represents the many-to-many relationship between owners and devices, avoiding data duplication and keeping the responsibilities of each table separate.
 
-## Modelo de dados
+## Data model
 
-| Entidade | Responsabilidade |
-| --- | --- |
-| `marca` | Armazena os fabricantes |
-| `smartphone` | Armazena os dispositivos |
-| `proprietario` | Armazena os proprietários |
-| `proprietario_smartphone` | Associa proprietários e smartphones |
+| Entity                    | Responsibility                     |
+| ------------------------- | ---------------------------------- |
+| `marca`                   | Stores manufacturers               |
+| `smartphone`              | Stores devices                    |
+| `proprietario`            | Stores owners                     |
+| `proprietario_smartphone` | Associates owners and smartphones |
 
 ```text
 marca
@@ -30,36 +30,36 @@ marca
                          └── proprietario
 ```
 
-## Integridade Referencial
+## Referential integrity
 
-O script utiliza:
+The script uses:
 
-- Chaves primárias para identificar os registros;
-- chaves estrangeiras para preservar os relacionamentos;
-- constraints `UNIQUE` para impedir duplicidades;
-- `ON DELETE RESTRICT` para bloquear exclusões que violariam dependências;
-- `ON DELETE CASCADE` para remoção controlada dos vínculos na tabela associativa;
-- tipos de dados adequados ao domínio.
+- Primary keys to identify records;
+- foreign keys to preserve relationships;
+- `UNIQUE` constraints to prevent duplicates;
+- `ON DELETE RESTRICT` to block deletions that would violate dependencies;
+- `ON DELETE CASCADE` for controlled removal of relationships in the associative table;
+- data types appropriate to the domain.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- Criação do modelo relacional;
-- cadastro de fabricantes;
-- cadastro de smartphones;
-- cadastro de proprietários;
-- relacionamento muitos-para-muitos;
-- utilização de tabela associativa;
-- definição de chaves primárias e estrangeiras;
-- aplicação de constraints `UNIQUE`;
-- inserção de dados iniciais para testes;
-- consultas SQL com `JOIN`;
-- consultas com funções de agregação;
-- consultas com subqueries;
-- validação das regras de integridade e do comportamento das constraints.
+- Relational model creation;
+- manufacturer registration;
+- smartphone registration;
+- owner registration;
+- many-to-many relationships;
+- use of an associative table;
+- definition of primary and foreign keys;
+- application of `UNIQUE` constraints;
+- insertion of initial test data;
+- SQL queries using `JOIN`;
+- queries with aggregation functions;
+- queries with subqueries;
+- validation of integrity rules and constraint behavior.
 
-### Consulta de validação
+### Validation query
 
-O script inclui consultas aplicadas ao modelo. O exemplo abaixo contabiliza os smartphones associados a cada proprietário:
+The script includes queries applied to the model. The example below counts the smartphones associated with each owner:
 
 ```sql
 SELECT p.nome, COUNT(ps.smartphone_id) AS total_smartphones
@@ -71,74 +71,74 @@ ORDER BY total_smartphones DESC;
 
 ## 🖼️ Screenshots
 
-### Diagrama do Modelo Relacional
+### Relational model diagram
 
-![Diagrama ER](https://i.imgur.com/rl2wzTo.jpeg)
+![ER diagram](https://i.imgur.com/rl2wzTo.jpeg)
 
-## Consulta Agrupada por Proprietário
+## Query grouped by owner
 
-![Resultado da consulta agrupada](evidencias_execucao_01_consulta_agrupada.jpg)
+![Grouped query result](evidencias_execucao_01_consulta_agrupada.jpg)
 
-## Listagem das tabelas
+## Table listing
 
-![Listagem das tabelas do banco](evidencias_execucao_02_listagem_tabelas.jpg)
+![Database table listing](evidencias_execucao_02_listagem_tabelas.jpg)
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **SQL:** definição e manipulação dos dados com DDL e DML;
-- **MySQL:** sistema gerenciador de banco de dados relacional;
-- **MariaDB:** alternativa compatível para execução do script.
+- **SQL:** data definition and manipulation using DDL and DML;
+- **MySQL:** relational database management system;
+- **MariaDB:** compatible alternative for running the script.
 
-## ⚙️ Como executar
+## ⚙️ How to run
 
-## Pré-requisitos
+## Prerequisites
 
 - Git;
-- MySQL ou MariaDB em execução;
-- cliente de linha de comando do banco ou phpMyAdmin.
+- MySQL or MariaDB running;
+- database command-line client or phpMyAdmin.
 
-## Clonar o repositório
+## Clone the repository
 
 ```bash
 git clone https://github.com/seu-usuario/SmartphoneDB.git
 cd SmartphoneDB
 ```
 
-## Importar com MySQL CLI
+## Import with MySQL CLI
 
-Execute o script a partir da raiz do repositório:
+Run the script from the repository root:
 
 ```bash
 mysql -u root -e "source SmartphoneDB.sql"
 ```
 
-Se o usuário exigir senha, utilize:
+If the user requires a password, use:
 
 ```bash
 mysql -u root -p -e "source SmartphoneDB.sql"
 ```
 
-## Importar com phpMyAdmin
+## Import with phpMyAdmin
 
-1. Inicie o MySQL ou MariaDB;
-2. abra o phpMyAdmin;
-3. acesse a opção **Importar**;
-4. selecione o arquivo `SmartphoneDB.sql`;
-5. confirme a execução.
+1. Start MySQL or MariaDB;
+2. open phpMyAdmin;
+3. select the **Import** option;
+4. select the `SmartphoneDB.sql` file;
+5. confirm the execution.
 
-## Verificação
+## Verification
 
-Após a importação:
+After importing:
 
-1. Confirme a criação das quatro tabelas;
-2. verifique os dados iniciais;
-3. execute as consultas com `JOIN`;
-4. valide as agregações, incluindo `COUNT` e `AVG`;
-5. teste as restrições `RESTRICT` e `CASCADE`.
+1. Confirm that the four tables were created;
+2. check the initial data;
+3. run the queries using `JOIN`;
+4. validate the aggregations, including `COUNT` and `AVG`;
+5. test the `RESTRICT` and `CASCADE` constraints.
 
-## 📂 Estrutura do projeto
+## 📂 Project structure
 
-O repositório reúne o script SQL, a documentação e as evidências de execução:
+The repository contains the SQL script, documentation, and execution evidence:
 
 ```text
 SmartphoneDB/
@@ -148,25 +148,25 @@ SmartphoneDB/
 └── evidencias_execucao_02_listagem_tabelas.jpg
 ```
 
-- `SmartphoneDB.sql`: criação das tabelas, constraints, dados de teste e consultas;
-- `README.md`: documentação técnica;
-- `evidencias_execucao_01_consulta_agrupada.jpg`: resultado da consulta agrupada;
-- `evidencias_execucao_02_listagem_tabelas.jpg`: evidência das tabelas criadas.
+- `SmartphoneDB.sql`: table creation, constraints, test data, and queries;
+- `README.md`: technical documentation;
+- `evidencias_execucao_01_consulta_agrupada.jpg`: grouped query result;
+- `evidencias_execucao_02_listagem_tabelas.jpg`: evidence of the created tables.
 
-## 🌐 Deploy
+## 🌐 Deployment
 
-O Smartphones DB é um projeto de banco de dados e não possui deploy web. O script pode ser executado em qualquer servidor compatível com MySQL ou MariaDB.
+Smartphones DB is a database project and does not have a web deployment. The script can be executed on any server compatible with MySQL or MariaDB.
 
-A instalação consiste em importar `SmartphoneDB.sql` por meio do MySQL CLI, phpMyAdmin ou outra ferramenta compatível. Para uso remoto, basta executar o script em uma instância de banco com as permissões necessárias para criar tabelas, constraints e registros.
+Installation consists of importing `SmartphoneDB.sql` through MySQL CLI, phpMyAdmin, or another compatible tool. For remote use, simply run the script on a database instance with the permissions required to create tables, constraints, and records.
 
-## 👤 Autor
+## 👤 Author
 
 **Natan Da Luz**
 
 - LinkedIn: [linkedin.com/in/natandaluz](https://www.linkedin.com/in/natandaluz/)
-- Portfólio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
+- Portfolio: [portfolionatan.vercel.app](https://portfolionatan.vercel.app/)
 - E-mail: [natandaluz01@gmail.com](mailto:natandaluz01@gmail.com)
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sem uma licença definida no momento.
+This project does not currently have a defined license.
